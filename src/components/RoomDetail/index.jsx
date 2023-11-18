@@ -6,7 +6,7 @@ export const RoomDetail = ({ type, description, price, image }) => {
 			<section class="light">
 				<div class="container">
 					<h2>
-						Pokoj {type}, {price} na osobu za noc
+						Pokoj {type}, {price} Kč na osobu za noc
 					</h2>
 					<div class="columns-2">
 						<div class="column">
