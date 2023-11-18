@@ -1,22 +1,29 @@
 import './style.css';
-import { RoomReservation } from '../../components/RoomReservation';
 import { RoomDetail } from '../../components/RoomDetail';
 import { Contacts } from '../../components/Contacts';
 import { Banner } from '../../components/Banner';
 import { RoomsList } from '../../components/RoomsList';
+import { useState } from 'react';
 
 export const HomePage = () => {
+	const [selectedRoom, setSelectedRoom] = useState(null);
 	return (
 		<div>
 			<Banner />
-			<RoomsList />
-			<section class="light">
-				<div class="container">
-					<h2>Heading</h2>
-					<RoomDetail />
-					<RoomReservation />
-				</div>
-			</section>
+			<RoomsList
+				onSelect={(room) => {
+					setSelectedRoom(room);
+				}}
+			/>
+			{selectedRoom !== null ? (
+				<RoomDetail
+					key={selectedRoom.id}
+					type={selectedRoom.type}
+					price={selectedRoom.price}
+					description={selectedRoom.description}
+					image={selectedRoom.image}
+				/>
+			) : null}
 			<Contacts />
 		</div>
 	);

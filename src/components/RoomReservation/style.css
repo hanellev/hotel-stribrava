@@ -51,3 +51,7 @@ button.wide {
 	width: 100%;
 	padding: 1rem;
 }
+
+section.light {
+	background-color: #e8e9f3;
+}

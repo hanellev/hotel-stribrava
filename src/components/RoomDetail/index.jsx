@@ -1,14 +1,22 @@
-export const RoomDetail = () => {
+import { RoomReservation } from '../../components/RoomReservation';
+
+export const RoomDetail = ({ type, description, price, image }) => {
 	return (
-		<div class="columns-2">
-			<div class="column">
-				<img src="img/image1.svg" />
-				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-					accusantium, dolor quisquam doloremque quod nobis temporibus ducimus
-					sapiente consectetur distinctio assumenda, nisi suscipit saepe. Vero.
-				</p>
-			</div>
+		<div>
+			<section class="light">
+				<div class="container">
+					<h2>
+						Pokoj {type}, {price} na osobu za noc
+					</h2>
+					<div class="columns-2">
+						<div class="column">
+							<img src={image} />
+							<p>{description}</p>
+						</div>
+					</div>
+					<RoomReservation />
+				</div>
+			</section>
 		</div>
 	);
 };
