@@ -1,31 +1,53 @@
+import './style.css';
 export const RoomReservation = () => {
 	return (
 		<form>
 			<div class="form-fields">
 				<label htmlFor="field1" class="field-label">
-					Field 1:
+					Od:
 				</label>
-				<input id="field1" class="field-input" type="text" />
+				<input id="field1" class="field-input" type="date" />
 
 				<label htmlFor="field2" class="field-label">
-					Field 2:
+					Do:
 				</label>
-				<input id="field2" class="field-input" type="text" />
-
+				<input id="field2" class="field-input" type="date" />
+				<label htmlFor="field1" class="field-label">
+					Počet osob:
+				</label>
+				<input id="field1" class="field-input" type="number" />
 				<label htmlFor="select" class="field-label">
-					Select:
+					Stravování:
 				</label>
 				<select id="select" class="field-input">
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-					<option>Option 4</option>
+					<option>Bez stravování</option>
+					<option>Snídaně</option>
+					<option>Polopenze</option>
+					<option>Plná penze</option>
 				</select>
 
 				<label htmlFor="check1" class="field-label">
-					Checkbox 1:
+					Domácí mazlíček:
 				</label>
 				<input id="check1" class="field-input" type="checkbox" />
+				<label htmlFor="check1" class="field-label">
+					Přistýlka pro dítě:
+				</label>
+				<input id="check1" class="field-input" type="checkbox" />
+				<label htmlFor="check1" class="field-label">
+					Bezbariérový přístup:
+				</label>
+				<input id="check1" class="field-input" type="checkbox" />
+
+				<label htmlFor="field1" class="field-label">
+					Email:
+				</label>
+				<input id="field1" class="field-input" type="email" />
+
+				<label htmlFor="field2" class="field-label">
+					Telefon:
+				</label>
+				<input id="field2" class="field-input" type="tel" />
 			</div>
 			<button class="wide">Submit</button>
 		</form>
